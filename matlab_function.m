@@ -9,11 +9,14 @@ RAAN = input('Right Ascension of the Ascending Node (degree): ');
 disp(PQW2ECI(arg_prg,inc_angle,RAAN));
 %}
 
+%% HW12
 semimajor_axis=input('semimajor_axis (Km): ');
 eccentricity=input('ecentricity : ');
 true_anomaly=input('true_anomaly (degree): ');
 
+disp('rangeInPQW =');
 disp(solveRangeInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
+disp('velocityInPQW =');
 disp(solveVelocityInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
 
 

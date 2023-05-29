@@ -13,8 +13,9 @@ semimajor_axis=input('semimajor_axis (Km): ');
 eccentricity=input('ecentricity : ');
 true_anomaly=input('true_anomaly (degree): ');
 
-fprintf('rangeInPQW = %m', solveRangeInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
-fprintf('velocityInPQW = %m', solveVelocityInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
+disp(solveRangeInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
+disp(solveVelocityInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly));
+
 
 
 %% HW11

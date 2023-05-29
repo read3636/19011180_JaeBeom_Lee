@@ -31,13 +31,13 @@ rotation_matrix=[cos(RAAN)*cos(arg_prg)-sin(RAAN)*cos(inc_angle)*sin(arg_prg), -
 
 end
 %% HW12
-function [rangeinPQW]=solveRangeInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly)  % 각도 unit : deg, 거리 unit : km로 통일
+function [rangeInPQW]=solveRangeInPerifocalFrame(semimajor_axis,eccentricity,true_anomaly)  % 각도 unit : deg, 거리 unit : km로 통일
 
 true_anomaly=deg2rad(true_anomaly);
 p=semimajor_axis*(1-eccentricity^2);
 r=p/(1+eccentricity*cos(true_anomaly));
 
-rangeinPQW=[r*cos(true_anomaly); r*sin(true_anomaly); 0;];
+rangeInPQW=[r*cos(true_anomaly); r*sin(true_anomaly); 0;];
 
 
 end
